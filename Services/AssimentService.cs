@@ -1,30 +1,24 @@
 using Items.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Items.Interfaces;
 
-namespace Items.Controllers
+namespace Items.Services 
 {   
-    public static class AssimentService
+    public class AssimentService:IAssiment
     {    
-        private static List<Assiment> assiments = new List<Assiment>
+        private List<Assiment> assiments = new List<Assiment>
         {
             new Assiment {Id=1, Description="wash the floor", Done = false },
             new Assiment {Id=2, Description="bake a cake", Done = true }
         };
 
-        public static List<Assiment> GetAll() => assiments;
-        public static Assiment Get(int id)
+        public List<Assiment> GetAll() => assiments;
+        public Assiment Get(int id)
         {
             return assiments.FirstOrDefault(a => a.Id == id);
         }
-
-        public static void Add(Assiment assiment)
-        {
-            assiment.Id = assiments.Max(a => a.Id) + 1;
-            assiments.Add(assiment);
-        }
-
-        public static bool Update(int id, Assiment newAssiment)
+        public bool Update(int id, Assiment newAssiment)
         {
             if (newAssiment.Id != id)
                 return false;
@@ -35,7 +29,7 @@ namespace Items.Controllers
             return true;
         }
 
-        public static bool Delete(int id)
+        public bool Delete(int id)
         {
             var assiment = assiments.FirstOrDefault(a => a.Id == id);
             if (assiment == null)
@@ -43,6 +37,14 @@ namespace Items.Controllers
             assiments.Remove(assiment);
             return true;
         }
+
+        public void Add(Assiment assiment)
+        {
+            assiment.Id = assiments.Max(a => a.Id) + 1;
+            assiments.Add(assiment);
+        }
+
+        
 
 
 
