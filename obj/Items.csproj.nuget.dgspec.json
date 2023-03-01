@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\תכנות\\יד\\core\\Items\\Items.csproj": {}
+    "E:\\תכנות\\יד\\Items\\Items.csproj": {}
   },
   "projects": {
-    "E:\\תכנות\\יד\\core\\Items\\Items.csproj": {
+    "E:\\תכנות\\יד\\Items\\Items.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\תכנות\\יד\\core\\Items\\Items.csproj",
+        "projectUniqueName": "E:\\תכנות\\יד\\Items\\Items.csproj",
         "projectName": "Items",
-        "projectPath": "E:\\תכנות\\יד\\core\\Items\\Items.csproj",
+        "projectPath": "E:\\תכנות\\יד\\Items\\Items.csproj",
         "packagesPath": "C:\\Users\\בר לב\\.nuget\\packages\\",
-        "outputPath": "E:\\תכנות\\יד\\core\\Items\\obj\\",
+        "outputPath": "E:\\תכנות\\יד\\Items\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
